@@ -1,0 +1,38 @@
+namespace hometask6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x, k, c = 0, a = 1, b;
+            Console.Write("enter first number ");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("система исчисления ");
+            k = Convert.ToInt32(Console.ReadLine()); 
+
+            while (x != 0)
+            {
+                b = x % 10; 
+                c = c+ b * a; 
+                x /= 10; 
+                a *= k; 
+            }
+            Console.WriteLine("в десятичной сс={0}", c);
+             
+             c=0; a=1; Console.WriteLine("enter second number");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("система исчисления ");
+            k = Convert.ToInt32(Console.ReadLine());
+
+            while (x != 0)
+            {
+                b = x % 10;
+                c = c + b * a;
+                x /= 10;
+                a *= k;
+            }
+            Console.WriteLine("в десятичной сс={0}", c);
+
+        }
+    }
+}
