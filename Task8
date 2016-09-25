@@ -1,0 +1,26 @@
+namespace hometask8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x, a;
+            string s, c;
+            a = 1; s = " "; c = " ";
+            Console.Write("eneter x"); x = Convert.ToInt32(Console.ReadLine());
+            while(x!=0) { if (x < 0) { x = Math.Abs(x);
+                                          s = Convert.ToString(x);
+                                                c = c + s;
+                                            }
+                else { while (a < x)
+                    { a = a * 2; }
+                    s = Convert.ToString(a);
+                    c = c + s;
+                }
+                Console.Write("eneter next"); x = Convert.ToInt32(Console.ReadLine()); a = 1;
+            }
+            Console.WriteLine("new order{0}", c);
+
+        }
+    }
+}
