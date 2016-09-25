@@ -1,0 +1,24 @@
+namespace ConsoleApplication14
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, x, b, sum = 0, sumOfDecimals = 0;
+            for (i = 1000; i <= 9999; i++)
+            {
+                x = i; Console.WriteLine("x={0}", x);
+                while (x != 0)
+                {
+                    b = x % 10;    // Нахождение цифры.
+                    b *= b;  b *= b;  // Возведение в четвертую степень.
+                    sumOfDecimals += b; // Сумма четвертых степеней цифр числа.
+                    x /= 10; 
+                }
+                
+                if (sumOfDecimals == i) { sum += sumOfDecimals; } // Сумма чисел, чье значение = сумме четвертых степеней цифр.
+            }
+            Console.WriteLine("what ya looking for={0}", sum); // Таких чисел нет, поэтому 0.
+        }
+    }
+}
