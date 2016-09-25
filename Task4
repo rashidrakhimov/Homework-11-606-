@@ -1,0 +1,21 @@
+namespace hometask4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, k, x, a;
+            Console.Write("enter n "); n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enter k "); k = Convert.ToInt32(Console.ReadLine());
+            a = 1; x = 1;
+            if (k%2==0) { for (int i = 1; i <= k/2; i++)
+                { a = a * n; x = a * a; }
+            }
+            else { for (int i = 1; i <= (k - 1) / 2; i++)
+                { a = a * n; x = a * a; }
+            }
+            if(k%2!=0) { x *= n; }
+            Console.WriteLine("result = {0}", x);
+        }
+    }
+}
