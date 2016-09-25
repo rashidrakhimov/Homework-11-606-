@@ -1,0 +1,23 @@
+namespace hometask5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, s;
+            string a, c;
+            c = " ";
+            Console.Write("enetr n");
+            n = Convert.ToInt32(Console.ReadLine());
+            while (n > 1)
+                 { s = n % 2;
+                n = n / 2;
+                a = Convert.ToString(s);
+                c = c + a;
+                }
+            c = c +"1";
+            Console.WriteLine(c);
+
+        }
+    }
+}
