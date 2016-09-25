@@ -1,0 +1,22 @@
+namespace ConsoleApplication16
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool a = false; int x, y, x1, y1;
+            Console.Write("enter x "); x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enter y "); y = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("enter x1 "); x1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enter y1 "); y1 = Convert.ToInt32(Console.ReadLine());
+            if ((x1==x+2)||(x1==x-2)) { if ((y1 == y + 1) || (y1 == y - 1)) a = true; }
+            else { if((x1==x+1)||(x1==x-1))
+                { if ((y1 == y + 2) || (y1 == y - 2))
+                        a= true; }
+                    }
+            if (a == true) Console.WriteLine("yes");
+            else Console.WriteLine("no");
+        }
+    }
+}
