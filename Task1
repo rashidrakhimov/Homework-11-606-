@@ -1,0 +1,23 @@
+namespace hometask1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x, y, a, b, c, e, d, f;
+            bool z = false;
+            Console.Write("enetr a"); a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enetr b"); b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enetr c"); c = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enetr d"); d = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enetr e"); e = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enetr f"); f = Convert.ToInt32(Console.ReadLine());
+            x = a + c + e;
+            y = b + d + f;
+            if ((y == x + 1) || (y == x - 1)) { z = true; };
+            if (z == true) { Console.WriteLine("almost lucky!"); }
+            else { Console.WriteLine("not even close"); };
+
+        }
+    }
+}
