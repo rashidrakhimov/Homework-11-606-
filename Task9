@@ -1,0 +1,26 @@
+namespace hometask9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long  x; int c, n=0 ; bool a = true;
+            Console.Write("enter x "); x = Convert.ToInt64(Console.ReadLine());
+            x = Math.Abs(x);
+while(x!=0) { if (x == 1) a = false;
+
+                for (c = 2; c*c<=x ; c++)
+                { if (x % c == 0) { a = false; }; }
+
+                    if (a == true) n++; Console.WriteLine(a);
+                   
+                    Console.Write("enter next "); x = Convert.ToInt64(Console.ReadLine());
+                    x = Math.Abs(x);
+                    a = true;
+
+                
+            }
+            Console.WriteLine("result= {0}", n);
+        }
+        }
+    }
