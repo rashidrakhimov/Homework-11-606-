@@ -1,0 +1,44 @@
+namespace hometask11
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            bool a = true;
+            int x=2, n = 0, k = 0, sum=0,c,ks=0;
+            
+            while (n < 1000)
+            { 
+                for (c = 2; c * c <= x; c++)
+                { if (x % c == 0) { a = false; }; } // Проверка на простоту.
+                if(a==true)
+                {
+                    n += x;
+                    k++;   
+                }
+                a = true;
+                
+
+                for (c = 2; c * c <= n; c++)
+                { if (n % c == 0) { a = false; }; } // Проверка на простоту суммы.
+                if(a==true) { sum = n;
+                    ks=k;
+                }
+                Console.WriteLine("ks={0}", ks);
+                Console.WriteLine("n={0}", n);
+                Console.WriteLine(sum);
+
+                a = true;
+                x++ ;
+                
+                     }
+                        
+            Console.WriteLine("количество в последовательности={0}", ks);
+            Console.WriteLine("сумма={0}", sum);
+            
+
+          
+
+        }
+    }
+}
