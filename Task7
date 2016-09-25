@@ -1,0 +1,39 @@
+namespace hometask7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long a, b, x, y, nok = 0, nod = 0;
+            Console.Write("enter a"); a = Convert.ToInt64(Console.ReadLine());
+            Console.Write("enter b"); b = Convert.ToInt64(Console.ReadLine());
+            x = b; y = a;
+            if(x!=0) { while (y != x)
+                {
+                    if (y > x) y = y - x;
+                    else x = x - y;
+                } }
+            nod = y;
+            nok = a * b / nod;
+            Console.Write("enter next");
+            b = Convert.ToInt64(Console.ReadLine());
+            while (b != 0)
+            {
+            
+                y = nok;
+                x = b;
+                while (y != x)
+                {
+                    if (y > x) y = y - x;
+                    else x = x - y;
+                }
+                nod = y;
+                nok = nok * b / nod;
+                Console.Write("enter next");
+                b = Convert.ToInt64(Console.ReadLine());
+
+            }
+            Console.WriteLine("nok={0}", nok);
+        }
+    }
+}
