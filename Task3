@@ -1,0 +1,42 @@
+namespace hometask3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c;
+            Console.Write("eneter a"); a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("eneter b"); b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("eneter c"); c = Convert.ToInt32(Console.ReadLine());
+
+            if (a == 0)
+            {
+                if (b == 0)
+                {
+                    if (c == 0) Console.WriteLine("0");
+                    else Console.WriteLine("{0}", c);
+                }
+                else
+                {
+                    if (c == 0) Console.WriteLine("{0}*x", b);
+                    else Console.WriteLine("{0}*x+{1}", b, c);
+                }
+            }
+            else
+            {
+                if (b == 0)
+                {
+                    if (c == 0) Console.WriteLine("{0}*x^2", a);
+                    else Console.WriteLine("{0}*x^2+{1}", a, c);
+                }
+                else
+                {
+                    if (c == 0) Console.WriteLine("{0}*x^2+{1}*x", a, b);
+                    else Console.WriteLine("{0}*x^2+{1}*x+{2}", a, b, c);
+                }
+            }
+
+
+        }
+    }
+}
