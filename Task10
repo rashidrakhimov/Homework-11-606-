@@ -1,0 +1,45 @@
+
+namespace hometask12
+{
+    class Program
+    {
+        static int Power(int a, int b) // Функция возведения в степень.
+        {
+          int  c = 1, d= 1;
+            if (b % 2 == 0)
+            {
+                for (int i = 1; i <= b/ 2; i++)
+                { c = c * a; d = c * c; }
+            }
+            else
+            {
+                for (int i = 1; i <= (b - 1) / 2; i++)
+                { c = c * a; d = c * c; }
+            }
+            if (b % 2 != 0) { d *= a; }
+            return d;
+        }
+        static void Main(string[] args)
+        {
+            int m, k, x, y, z, powx = 0, powy = 0, powz = 0, result=0, actualz=0;
+            Console.Write("enter m"); m = Convert.ToInt32(Console.ReadLine());
+            Console.Write("enter k"); k = Convert.ToInt32(Console.ReadLine());
+
+            for(x=0;x<=m-1;x++)
+            { powx = Power(x, k);
+              for(y=0;y<=m-1;y++)
+                { powy = Power(y, k);
+                    for (z = 0; z <= m - 1; z++)
+                    {
+                        powz = Power(z, k);
+                        actualz = (powz % m)*2;
+                        if (powx == powy + actualz) result++;
+                        Console.WriteLine("x={0} y={1} z={2} powx={3} powy={4} powz={5} actual={6} result{7}", x, y, z, powx, powy, powz, actualz, result);
+
+                    }
+                }    
+             }
+            Console.WriteLine("result={0}", result);
+        }
+    }
+}
